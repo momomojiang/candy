@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#background{
+    background-image: url("Holiday.jpg");
+    width: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: white;
+}
+#treat{
+    margin-left: 500px;
+    margin-top: 70px;
+    text-align: center;
+    position: absolute;
+
+}
+a{
+
+    text-decoration: none;
+    position: relative;
+    color: rgb(214, 115, 16);
+    font-size: 50px;
+}
+#comments{
+    color:#A52A2A;
+    text-align: center;
+    font-size: 59px;
+
+}
+#header{
+    margin-top:90px; 
+    font-size: 70px;
+}
+#startnow{
+    font-size: 70px;
+}
+#commentbox{
+    font-size: 90px;
+    position: relative;
+    margin-top: -660px;
+    margin-left: 80px;
+    width: 50px;
+}
+#container{
+    background-color: chocolate;
+}

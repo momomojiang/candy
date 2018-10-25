@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    l
+    <title>Welcome</title>
+</head>
+<body> 
+    
+        <h3>Love Candy ?</h3>
+
+        <h4> Want Candy Surprise ?</h4>
+
+        <button>Check it out !</button>
+        <button>Mayby Next Time..</button>
+
+        <form action="{% url 'show_img' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="img">
+            <button type="submit">UPDATE</button>
+        </form>
+    
+
+</body>
+</html>
