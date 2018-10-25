@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Liquor Candy</title>
+<style>
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 75%;
+}
+
+div.desc {
+    padding: 13px;
+    text-align: center;
+    font-size:15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 25%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        /* margin: 6px 0; */
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        /* width: 100%; */
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>
+{% load static %}
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/liquor/anthon-berg.png" %}" alt="anthon-berg" width="250" height="180">
+        <div class="desc">Anthon Berg Candy</div>
+    </div>
+</div>
+
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/liquor/champagne.png" %}" alt="champagne" width="250" height="180">
+        <div class="desc">Champagne Candy</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/liquor/chipurnoi.png" %}" alt="chipurnoi" width="250" height="180">
+        <div class="desc">Chipurnoi Candy</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/liquor/johnnie-walker.png" %}" alt="johnnie-walker" width="250" height="180">
+        <div class="desc">Johnnie Walker Candy</div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+</body>
+</html>

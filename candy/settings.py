@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'apps.login',
     'apps.candy_app',
+    'apps.select_your_candy',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

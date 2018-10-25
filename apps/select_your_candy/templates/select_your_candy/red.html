@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Red Candy</title>
+<style>
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 75%;
+}
+
+div.desc {
+    padding: 13px;
+    text-align: center;
+    font-size:15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 25%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        /* margin: 6px 0; */
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        /* width: 100%; */
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>
+{% load static %}
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/red/Cherries.png" %}" alt="cherrycandy" width="250" height="180">
+        <div class="desc">Cherries Flavor Candy</div>
+    </div>
+</div>
+
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/red/CherrySlices.png" %}" alt="cherryslice" width="250" height="180">
+        <div class="desc">Cherry Slices Candy</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/red/hottamales.png" %}" alt="hottamales" width="250" height="180">
+        <div class="desc">Hot Tamales Candy</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/red/kisses.png" %}" alt="kisses" width="250" height="180">
+        <div class="desc">Kisses</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/red/licoriceWheel.png" %}" alt="licoriceWheel" width="250" height="180">
+        <div class="desc">LicoriceWheel</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/red/Red Foiled.png" %}" alt="redfoiled" width="250" height="180">
+        <div class="desc">Red Foiled Chocolate Coins</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/red/RedFish.png" %}" alt="redfish" width="250" height="180">
+        <div class="desc">Red Fish Chewy Candy</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/red/TootsieRoll.png" %}" alt="tootsieroll" width="250" height="180">
+        <div class="desc">Tootsie Roll</div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+</body>
+</html>

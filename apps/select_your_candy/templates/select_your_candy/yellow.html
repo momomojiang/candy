@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Yellow Candy</title>
+<style>
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 75%;
+}
+
+div.desc {
+    padding: 13px;
+    text-align: center;
+    font-size:15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 25%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        /* margin: 6px 0; */
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        /* width: 100%; */
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>
+{% load static %}
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/yellow/Banana Salt Water Taffy.png" %}" alt="Banana Salt Water Taffy" width="250" height="180">
+        <div class="desc">Banana Salt Water Taffy</div>
+    </div>
+</div>
+
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/yellow/Big Gummy Lemons.png" %}" alt="Big Gummy Lemons" width="250" height="180">
+        <div class="desc">Big Gummy Lemons</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/yellow/Candy Ducks.png" %}" alt="Candy Ducks" width="250" height="180">
+        <div class="desc">Candy Ducks</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/yellow/Whirly Pop.png" %}" alt="Whirly Pop" width="250" height="180">
+        <div class="desc">Whirly Pop</div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+</body>
+</html>

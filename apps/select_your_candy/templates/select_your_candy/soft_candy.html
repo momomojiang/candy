@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Soft Candy</title>
+<style>
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 75%;
+}
+
+div.desc {
+    padding: 13px;
+    text-align: center;
+    font-size:15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 25%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        /* margin: 6px 0; */
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        /* width: 100%; */
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>
+{% load static %}
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/soft/gummybear.png" %}" alt="GummyBear" width="250" height="180">
+        <div class="desc">Haribo Gummi Bears</div>
+    </div>
+</div>
+
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/soft/Xtremes-Sourfuls.png" %}" alt="Xtremes-Sourfuls" width="250" height="180">
+        <div class="desc">AirHeads Xtremes Sourfuls Candy</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/soft/giant.png" %}" alt="giant-gummy" width="250" height="180">
+        <div class="desc">Giant Gummi</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/soft/ring-gummy.png" %}" alt="ring-gummy" width="250" height="180">
+        <div class="desc">Haribo Roulette Gummy Candy Rolls</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/soft/Trolli-Sour.png" %}" alt="sour-gummy-worm" width="250" height="180">
+        <div class="desc">Trolli Sour Brite Crawlers Gummy Worms</div>
+    </div>
+</div>
+
+<div class="responsive">
+        <div class="gallery">
+            <img src="{% static "css/soft/Starburst.png" %}" alt="starburst" width="250" height="180">
+            <div class="desc">Starburst Gummies Candy</div>
+        </div>
+</div>
+
+<div class="responsive">
+        <div class="gallery">
+            <img src="{% static "css/soft/shark.png" %}" alt="shark_chewy" width="250" height="180">
+            <div class="desc">Sour Gummy Sharks Candy</div>
+        </div>
+</div>
+
+<div class="responsive">
+        <div class="gallery">
+            <img src="{% static "css/soft/mike.png" %}" alt="a_candy_pic" width="250" height="180">
+            <div class="desc">Mike and Ike Candy</div>
+        </div>
+</div>
+
+<div class="clearfix"></div>
+
+</body>
+</html>

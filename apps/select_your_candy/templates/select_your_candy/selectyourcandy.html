@@ -1,0 +1,190 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SelectYourCandy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    h3{
+        margin-left: 100px;
+    }
+    /* Dropdown Button */
+    .dropleft-button {
+        background-color: slateblue;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border-radius: 35%
+    }
+    .dropleft {
+        position: relative;
+        display: inline-block;
+    }
+    /* Dropdown Content (Hidden by Default) */
+    .dropleft-list {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    /* Links inside the dropdown */
+    .dropleft-list a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-family: verdana;
+    }
+    /* Change color of dropdown links on hover */
+    .dropleft-list a:hover {
+        background-color: crimson
+    }
+    /* Show the dropdown list on hover */
+    .dropleft:hover .dropleft-list {
+        display: block;
+    }
+    /* Change the background color of the dropdown button when the dropdown list is shown */
+    .dropleft:hover .dropleft-button {
+        background-color: #6666ff;
+    }
+    .form-control{
+        margin-left: 200px;
+    }
+    label{
+        margin-left: 200px;
+    }
+    .btn-success{
+        margin-left: 900px;
+    }
+    </style>
+<body>
+    <div id="header-pic">
+        <img src="{% static "css/header.png" %}" alt="header-pic" width="1340" height="200">
+    </div>
+            <div id="container">
+                <h3>Ready to Make Your Choice?</h3>
+                <div class="dropleft">
+                    <button class="dropleft-button">CandyType</button>
+                    <div class="dropleft-list">
+                        <a href="soft_candy">Soft</a>
+                        <a href="hard_candy">Hard</a>
+                    </div>
+                </div>
+                <div class="dropleft">
+                        <button class="dropleft-button">CandyFlavor</button>
+                        <div class="dropleft-list">
+                            <a href="chocolate">Chocolate Candy</a>
+                            <a href="coconut">Coconut Candy</a>
+                            <a href="cotton">Cotton Candy</a>
+                            <a href="ice_cream">Ice Cream Candy</a>
+                            <a href="liquor">Liquor Candy</a>
+                        </div>
+                </div>
+                <div class="dropleft">
+                        <button class="dropleft-button">CandyColor</button>
+                        <div class="dropleft-list">
+                            <a href="red">Red</a>
+                            <a href="orange">Orange</a>
+                            <a href="yellow">Yellow</a>
+                            <a href="green">Green</a>
+                            <a href="blue">Blue</a>
+                            <a href="Indigo">Indigo</a>
+                            <a href="violet">Violet</a>
+                        </div>
+                </div>
+
+                <div class="dropleft">
+                            <button class="dropleft-button">Themes</button>
+                            <div class="dropleft-list">
+                                <a href="babyshower">Baby Shower</a>
+                                <a href="valentines">Valentine's Day</a>
+                                <a href="birthday">BirthDay</a>
+                                <a href="eastercandy">Easter Candy</a>
+                                <a href="thanksgiving">Thanksgiving Day</a>
+                                <a href="halloween">Halloween</a>
+                                <a href="christmas">Christmas</a>
+                            </div>
+                </div>
+                <div class="dropleft">
+                            <button class="dropleft-button">Brand</button>
+                            <div class="dropleft-list">
+                                <a href="americanfish">American Fish Candy</a>
+                                <a href="ghirardelli">Ghirardelli Chocolate</a>
+                                <a href="hershey">Hershey Chocolate</a>
+                                <a href="hubbabubbagum">Hubba Bubba Gum</a>
+                                <a href="kitkatcandy">Kit Kat Candy</a>
+                                <a href="m_m">M&M</a>
+                            </div>
+                </div>
+
+                <form action="/select_your_candy/create_order/{{request.session.id}}" method="post">
+                    {% csrf_token %}
+                        <div class="form-group">
+                        <label for="candy_type">Select your Candy Type</label>
+                        <select class="form-control" name="candy_type" style="width: 600px; height=50px">
+                            <option default="Soft">Soft</option>
+                            <option>Hard</option>
+                        </select>
+                        </div>
+                        <div class="form-group">
+                        <label for="candy_type">Select your Candy Flavor</label>
+                        <select class="form-control" name="candy_flavor" style="width: 600px; height=50px">
+                            <option default="chocolate">Chocolate</option>
+                            <option>Coconut</option>
+                            <option>Cotton</option>
+                            <option>Liquor</option>
+                            <option>Ice Cream</option>
+                        </select>
+                        </div>
+                        <div class="form-group">
+                        <label for="candy_type">Select your Candy Color</label>
+                        <select class="form-control" name="candy_color" style="width: 600px; height=50px">
+                            <option default="chocolate">Red</option>
+                            <option>Orange</option>
+                            <option>Yellow</option>
+                            <option>Green</option>
+                            <option>Blue</option>
+                            <option>Indigo</option>
+                            <option>Violet</option>
+                        </select>
+                        </div>
+                        <div class="form-group">
+                        <label for="candy_type">Select your Candy Themes</label>
+                        <select class="form-control" name="themes" style="width: 600px; height=50px">
+                            <option>Baby Shower</option>
+                            <option>Valentine's Day</option>
+                            <option>BirthDay</option>
+                            <option>Easter Candy</option>
+                            <option>Thanksgiving Day</option>
+                            <option default="halloween">Halloween</option>
+                            <option>Christmas</option>
+                        </select>
+                        </div>
+                        <div class="form-group">
+                        <label for="candy_type">Select your Candy Brand</label>
+                        <select class="form-control" name="brands" style="width: 600px; height=50px">
+                            <option>American Fish Candy</option>
+                            <option>Ghirardelli Chocolate</option>
+                            <option>Hershey Chocolate</option>
+                            <option>Hubba Bubba Gum</option>
+                            <option>Kit Kat Candy</option>
+                            <option default="m_m">M&M</option>
+                        </select>
+                        </div>
+                        <button type="submit" class="btn btn-success">Purchase</button>
+                        <a herf="/good_bye" type="button" class="btn btn-danger">Maybe Next Time</a>
+                </form>
+            </div>
+    <div id="footer">
+            <img src="{% static "css/footer.png" %}" alt="footer" width="1340" height="150">
+    </div>
+</body>
+</html>

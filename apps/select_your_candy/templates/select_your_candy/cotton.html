@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Cotton Candy</title>
+<style>
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 75%;
+}
+
+div.desc {
+    padding: 13px;
+    text-align: center;
+    font-size:15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 25%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        /* margin: 6px 0; */
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        /* width: 100%; */
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>
+{% load static %}
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/cotton/blueberry.png" %}" alt="blueberry" width="250" height="180">
+        <div class="desc">Blueberry Cotton Candy</div>
+    </div>
+</div>
+
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/cotton/Cotton-Candy.png" %}" alt="cotton-candy" width="250" height="180">
+        <div class="desc">Cotton Candy</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/cotton/old-fashion.png" %}" alt="old-fashion" width="250" height="180">
+        <div class="desc">Old Fashion Cotton Candy</div>
+    </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+        <img src="{% static "css/cotton/Sour-Cotton-Candy.png" %}" alt="sour-cotton-candy" width="250" height="180">
+        <div class="desc">Sour Cotton Candy</div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+</body>
+</html>
