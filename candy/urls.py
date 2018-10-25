@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^', include('apps.candy_app.urls')),
     url(r'^login/', include('apps.login.urls')),
     url(r'^select_your_candy/', include('apps.select_your_candy.urls')),
+    url(r'^payment/', include('apps.payment.urls')),
     
 ]
