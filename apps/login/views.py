@@ -43,30 +43,7 @@ def login(request):
 
 def logout(request):
 	request.session.clear()
-	return redirect('/')
-
-
-# def edit(request,id):
-#     print("@@@@@@@@@ EDIT FUNCTION @@@@@@@@@")
-#     context={
-#         'user': User.objects.get(id=id)
-#     }
-#     return render(request,'login/edit.html',context)
-
-# def update(request,id):
-#     errors = User.objects.update_validator(request.POST)
-#     if len(errors)>0:
-#         for key,value in errors.items():
-#             messages.error(request,value)
-#         return redirect(reverse('edit_user', kwargs={'id':id}))
-#     else:
-#         user=User.objects.get(id=id)
-#         user.first_name=request.POST['first_name']
-#         user.last_name=request.POST['last_name']
-#         user.email=request.POST['email']
-#         user.save()
-#         return redirect('dashboard')
-
+	return redirect('/login')
 
 
 

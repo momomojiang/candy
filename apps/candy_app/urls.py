@@ -6,9 +6,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
-    url(r'^$',views.index),
-    # url(r'^uploadImg$',views.uploadImg,name="upload_img" ),
-    # url(r'^showImg$',views.showImg,name="show_img"),
+    url(r'^$',views.index, name="main-page"),
+    url(r'^create$',views.create, name="create-sweet"),
+    url(r'^delete/(?P<id>\d+)$', views.delete, name='delete_message'),
 ]
-
-# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

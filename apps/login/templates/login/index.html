@@ -7,13 +7,30 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     {% load static %}
     <link rel="stylesheet" href="{% static '/login/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <style>
+        .container{
+            background-image: url("/static/login/css/logincandy.jpg");
+            padding: 40px;
+        }
+        .form-control input{
+            background-color: transparent;
 
+        }
+        #logout{
+            position: inline-block;
+            margin-left: 780px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
 <div class='container'>
 	<h1>Welcome!</h1>
-	<h2>Register</h2>
+    <h2>Register</h2>
+    <div id="logout">
+   <a href="{% url 'main-page' %}">Back</a>
+    </div>
 	<form class="form-group inline " action='/login/register' method='post'>
         {% csrf_token %}
         <p>First Name: <input class="form-control" type="text" name='first_name'></p>
