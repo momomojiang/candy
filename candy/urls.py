@@ -16,12 +16,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.conf import settings 
-
+from django.contrib import admin
 
 urlpatterns = [
     url(r'^', include('apps.candy_app.urls')),
     url(r'^login/', include('apps.login.urls')),
     url(r'^select_your_candy/', include('apps.select_your_candy.urls')),
     url(r'^payment/', include('apps.payment.urls')),
-    
+    url(r'^admin/', admin.site.urls),
 ]

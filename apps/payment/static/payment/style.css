@@ -1,0 +1,14 @@
+
+body, 
+html,
+header {
+        height: 100%;
+}
+
+.big-banner{
+    background-image: url('https://images.pexels.com/photos/1043520/pexels-photo-1043520.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

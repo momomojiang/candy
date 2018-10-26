@@ -5,3 +5,8 @@ from django.contrib import messages
 
 def payment(request,id):
     return render(request,'payment/payment.html')
+
+def make_payment(request,id):
+    return redirect('/success_purchase')
+def successs_purchase(request,id):
+    return render(request,'payment/success.html')
