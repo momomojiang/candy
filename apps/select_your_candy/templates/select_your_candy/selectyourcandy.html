@@ -125,7 +125,7 @@
                             </div>
                 </div>
 
-                <form action="/select_your_candy/create_order/{{request.session.id}}" method="post">
+                <form action="create_order/{{request.session.user_id}}" method="post">
                     {% csrf_token %}
                         <div class="form-group">
                         <label for="candy_type">Select your Candy Type</label>
