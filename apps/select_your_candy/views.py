@@ -52,8 +52,11 @@ def violet(request):
 def create_order(request,id):
     order_by = User.objects.get(id=request.session['user_id']) 
     Order.objects.create(candy_type=request.POST['candy_type'], candy_flavor=request.POST['candy_flavor'], candy_color=request.POST['candy_color'],themes=request.POST['themes'],brands=request.POST['brands'],order_by=order_by)
-    return redirect('/payment')
+    return redirect('select_your_candy/create_order/')
 
+redirect to payment method 
+#in payment method, render to payment.html(form in html)
+#
 
 
 
