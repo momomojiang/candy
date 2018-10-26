@@ -54,8 +54,5 @@ def create_order(request,id):
     Order.objects.create(candy_type=request.POST['candy_type'], candy_flavor=request.POST['candy_flavor'], candy_color=request.POST['candy_color'],themes=request.POST['themes'],brands=request.POST['brands'],order_by=order_by)
     return redirect('select_your_candy/create_order/')
 
-just test 
-
-
 
 
